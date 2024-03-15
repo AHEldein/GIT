@@ -8,8 +8,10 @@ concurrency:
 
 jobs:
     first_job:
+        timeout-minutes: 1
         runs-on: ubuntu-latest
         steps:
             - name: write hello
+              timeout-minutes: 10  
               run: echo "hello world"
         
