@@ -2,7 +2,7 @@ name: 1st project
 
 on: 
     schedule:
-        - cron: "*/1 * * * *"
+        - cron: "* * * * *"
 
 jobs:
     first_job:
