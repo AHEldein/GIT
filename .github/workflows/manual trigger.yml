@@ -1,0 +1,10 @@
+name: 1st project
+
+on: workflow_dispatch
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: write hello
+              run: echo "hello world" 
