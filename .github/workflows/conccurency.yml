@@ -1,0 +1,29 @@
+name: concurrency
+on: push
+
+concurrency: 
+    group: staging
+    cancel-in-progress: true
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: upload
+              run: echo "Hola Ahmed" >> hello.txt  
+            - uses: actions/upload-artifact@v4
+              with:
+                  name: Hello Text
+                  path: hello.txt
+              
+    
+    Deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download
+              uses: actions/download-artifact@v4
+              with:
+                  name: Hello Text
+            - name: Read
+              run: cat hello.txt
