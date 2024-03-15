@@ -2,7 +2,7 @@ name: concurrency
 on: push
 
 concurrency: 
-    group:  ${{ github.workflow }}-${{ github.ref }}
+    group:  Staging
     cancel-in-progress: true
 
 jobs:
@@ -30,4 +30,4 @@ jobs:
                 cat hello.txt
                 sleep 500
 
-                
+
