@@ -13,5 +13,6 @@ jobs:
         steps:
             - name: write hello
               timeout-minutes: 10  
-              run: echo "hello world"
-        
+              run: |
+                echo "hello world"
+                sleep 500
