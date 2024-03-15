@@ -28,4 +28,4 @@ jobs:
             - name: Read
               run: |
                 cat hello.txt
-                sleep 100 
+                sleep 5
