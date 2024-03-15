@@ -3,7 +3,7 @@ name: Manual Trigger
 on: workflow_dispatch
 
 jobs:
-    first_job:
+    Download:
         runs-on: ubuntu-latest
         steps:
         - name: write hello
@@ -12,3 +12,14 @@ jobs:
           with:
             name: Hello World
             path: hello.txt
+
+    upload:
+        needs: Download
+        runs-on: ubuntu-latest
+        steps:
+        - name: download artifact
+        - uses: actions/download-artifact@v4
+          with:
+                name: Hello World
+                path: ./hellos
+          run: cat hello.txt
