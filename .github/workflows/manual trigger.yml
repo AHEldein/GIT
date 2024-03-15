@@ -17,9 +17,10 @@ jobs:
         needs: Download
         runs-on: ubuntu-latest
         steps:
-        - name: download artifact
-        - uses: actions/download-artifact@v4
-          with:
-                name: Hello World
-                path: ./hellos
-          run: cat hello.txt
+          - name: Download Artifact
+            uses: actions/download-artifact@v4
+            with:
+              name: Hello World
+              path: ./downloads
+          - name: Read File
+            run: cat hello.tx
