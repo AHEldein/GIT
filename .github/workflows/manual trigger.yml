@@ -23,4 +23,7 @@ jobs:
               name: Hello World
               path: ./downloads
           - name: Read File
-            run: cat ./downloads/hello.tx
+            run: |
+                pwd
+                ls -al
+                cat ./downloads/hello.txt
