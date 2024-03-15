@@ -6,5 +6,9 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: write hello
-              run: echo "hello world" 
+        - name: write hello
+          run: echo "hello world" >> hello.txt
+        - uses: actions/upload-artifact@v4
+          with:
+            name: Hello World
+            path: hello.txt
