@@ -26,4 +26,6 @@ jobs:
               with:
                   name: Hello Text
             - name: Read
-              run: cat hello.txt
+              run: |
+                cat hello.txt
+                sleep 100 
