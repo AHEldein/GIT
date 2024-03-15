@@ -1,4 +1,4 @@
-name: 1st project
+name: Manual Trigger
 
 on: workflow_dispatch
 
