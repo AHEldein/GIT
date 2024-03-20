@@ -1,6 +1,6 @@
 name: Install Nodejs
 
-on: [push, workflow_dispatch]
+on: push
 
 jobs:
     deploy:
